@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "44785d80-a594-4ba1-bd7a-0014eedcd0a5",
+		"name": "ai-project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31510432"
+	},
+	"item": [
+		{
+			"name": "ai-chat",
+			"item": [
+				{
+					"name": "add-story",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"storyId\": \"1\",\r\n  \"storyText\": \"Once upon a time in a small village, there was a young girl named Emily who loved to explore. One day, while playing near the old oak tree in her backyard, she noticed something shiny half-buried in the dirt. It was an old, rusty key. Curious, Emily picked it up and examined it closely. The key was unlike any she had ever seen before. It had strange engravings on it that she couldn’t understand. Excited by her discovery, Emily decided to find out what the key opened. She spent the next few days searching around the house, trying it on every door, chest, and box she could find. After much searching, she remembered the old wooden chest in the attic, a place she rarely visited. She hurried upstairs and unlocked the chest with the mysterious key. To her amazement, inside the chest was a collection of old maps, letters, and a small, dusty book. Emily flipped through the book and realized it was a journal belonging to her great-grandfather, who had been an explorer. The key, it turned out, was a part of the family's hidden history. Emily spent the next few weeks uncovering secrets about her great-grandfather's travels. The key had unlocked not just a chest, but a treasure trove of stories and adventures that had been lost to time.\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/add-story",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"add-story"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ask-question",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmRlYWJiMWQ3OWYyYTQ0YzJkZTdmYzIiLCJwYXltZW50U3RhdHVzIjowLCJyb2xlIjoiVXNlciIsImRldmljZUlkIjoiY2F6MFJTZHJUVUNzZUlabmsxMUEwTjpBUEE5MWJGbl9UUWhGTml2N3RObVRBdElNNGlKd1dqUDlxLXVBRnAzMHI2NnIxUFFQTmlNTWctY2pieGFHcFhnUTltcmVJbkp4d1IzY3lWQTlWeDdlUi1PdnBuU3JIT3lnLXRCS2xiNlE5T3NnTkc5U2duQXVtTSIsImlhdCI6MTczNTI5ODI0MX0.UrxJwt9WOU94OIKxCClFPg9-epcu-Ff7lvtlJD1Lq18",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question\":\"who was Emily?\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/chat",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"chat"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
